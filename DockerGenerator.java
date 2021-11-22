@@ -2,12 +2,15 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Properties;
-
 public class DockerGenerator {
 	public static void main(String[] args) throws IOException {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-FileInputStream fin=new FileInputStream("C:\\Users\\MOSAIF\\Documents\\GitHub\\JenkinsBDD\\jenkinsprop.properties");
+FileInputStream fin=new FileInputStream("jenkinsprop.properties");
 Properties prop=new Properties();
 prop.load(fin);
 String type=prop.getProperty("type");
@@ -44,7 +47,7 @@ catch(Exception e)
 
 System.out.println(tags);
 
-FileWriter fout=new FileWriter("C:\\Users\\MOSAIF\\Documents\\GitHub\\JenkinsBDD\\Dockerfile");
+FileWriter fout=new FileWriter("Dockerfile");
 fout.write("#base image of JDK(First Layer)\r\n"
 		+ "FROM openjdk\r\n"
 		+ "\r\n"

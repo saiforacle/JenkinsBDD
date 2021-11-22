@@ -24,4 +24,4 @@ COPY . /app
 WORKDIR /app
 
 
-CMD mvn clean test
+CMD mvn test-Dcucumber.options="--features src/test/resources/GLReconEngine --glue {Step} --tags @smoke@Creation1@ENT_CONF_CRUD_API_1"
