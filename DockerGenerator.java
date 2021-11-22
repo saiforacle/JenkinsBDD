@@ -74,7 +74,7 @@ fout.write("#base image of JDK(First Layer)\r\n"
 		+ "WORKDIR /app\r\n"
 		+ "\r\n"
 		+ "\r\n"
-		+ "CMD mvn test-Dcucumber.options=\"--features src/test/resources/GLReconEngine --glue {Step} --tags "+ tags + "\"")  ;
+		+ "CMD mvn test -Dcucumber.options=\"--features src/test/resources/GLReconEngine glue {Step} --tags "+ tags + "\"")  ;
 fout.close();
 	}
 
