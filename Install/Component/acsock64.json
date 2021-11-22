@@ -1,0 +1,12 @@
+{
+   "component" : [
+      {
+         "architecture" : "x86_64",
+         "display_name" : "AnyConnect Kernel Driver Framework",
+         "id" : "com.cisco.anyconnect.kdf",
+         "platform" : "windows",
+         "type" : "component",
+         "version" : "4.10.02028"
+      }
+   ]
+}
