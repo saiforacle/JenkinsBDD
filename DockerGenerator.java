@@ -75,7 +75,7 @@ fout.write("#base image of JDK(First Layer)\r\n"
 		+ "WORKDIR /app\r\n"
 		+ "\r\n"
 		+ "\r\n"
-		+ "CMD mvn test -Dcucumber.filter.tags=\""+tags+"\"")  ;
+		+ "CMD mvn test -Dcucumber.filter.tags=\""+tags+"\"")  ; 
 fout.close();
 	}
 
