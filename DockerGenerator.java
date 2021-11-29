@@ -38,6 +38,7 @@ while (rs.next())
 	System.out.println("inside");
 	tags=rs.getString(1);
 }
+tags=tags.replace(",", " and ");
 System.out.println("Tags="+tags);
 }
 catch(Exception e)
@@ -74,7 +75,7 @@ fout.write("#base image of JDK(First Layer)\r\n"
 		+ "WORKDIR /app\r\n"
 		+ "\r\n"
 		+ "\r\n"
-		+ "CMD mvn test -Dcucumber.options=\"--features src/test/resources/GLReconEngine glue {Step} --tags "+ tags + "\"")  ;
+		+ "CMD mvn test -Dcucumber.filter.tags=\""+tags+"\"")  ;
 fout.close();
 	}
 
